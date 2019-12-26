@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "custom_website",
+    'name': "inovice_home-staging",
 
     'summary': """
         Modelo de factura personalizada de Home Staging""",

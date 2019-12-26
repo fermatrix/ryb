@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "custom_website",
+    'name': "invoice_ENZO",
 
     'summary': """
         Modelo de factura personalizada de ENZO""",
