@@ -2,11 +2,11 @@
   <data>
  
     <report
-        id="report_invoice_ENZO"
+        id="report_invoice_enzo"
         string="Factura ENZO"
         model="account.invoice"
         report_type="qweb-html"
-        name="invoice_ENZO.factura_ENZO_template"
+        name="invoice_enzo.factura_ENZO_template"
     />
 
 
@@ -15,7 +15,7 @@
     <template id="factura_ENZO_template">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <t t-call="invoice_ENZO.esquema_factura_document"/>
+                <t t-call="invoice_enzo.esquema_factura_document"/>
             </t>
         </t>
     </template>
@@ -24,7 +24,7 @@
 
 
     <template id="aux_para_datos">
-        <t t-name="invoice_ENZO.aux_para_datos">
+        <t t-name="invoice_enzo.aux_para_datos">
             <t t-if="not o" t-set="o" t-value="doc"/>
             <t t-if="not company">
                 <!-- Multicompany -->
@@ -38,7 +38,7 @@
                     <t t-set="company" t-value="res_company"/>
                 </t>
             </t>
-            <t t-call="invoice_ENZO.encabezadoypie"><t t-raw="0"/></t>
+            <t t-call="invoice_enzo.encabezadoypie"><t t-raw="0"/></t>
         </t>
     </template>
 
@@ -47,7 +47,7 @@
 
     <template id="encabezadoypie">
 
-        <t t-name="invoice_ENZO.encabezadoypie">
+        <t t-name="invoice_enzo.encabezadoypie">
 
             <div class="header">
                 <div class="row">
@@ -94,7 +94,7 @@
     <!-- Contenido de la factura -->
     <template id="esquema_factura_document">
 
-        <t t-call="invoice_ENZO.aux_para_datos">
+        <t t-call="invoice_enzo.aux_para_datos">
 
 
             <div class="page">
