@@ -3,10 +3,10 @@
     'name': "custom_website",
 
     'summary': """
-        Modelo de factura personalizada de ENZO""",
+        Modelo de factura personalizada de Home Staging""",
 
     'description': """
-        Modelo de factura personalizada de ENZO
+        Modelo de factura personalizada de Home Staging
     """,
 
     'author': "FJMR",
