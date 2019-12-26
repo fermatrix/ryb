@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ryb_inovice_homestaging",
+    'name': "ryb_invoice_homestaging",
 
     'summary': """
         Modelo de factura personalizada de Home Staging""",
