@@ -54,7 +54,7 @@
 
                     <!-- Logo empresa -->
                     <div class="col-6" style="margin-top:35px;">
-                        <img src="/ryb/invoice_home-staging/static/src/img/Logo_RentBuy.jpg"/>
+                        <img src="/invoice_home-staging/static/src/img/Logo_RentBuy.jpg"/>
                     </div>
 
                     <!-- Direccion empresa -->
