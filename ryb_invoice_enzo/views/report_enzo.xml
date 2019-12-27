@@ -6,7 +6,7 @@
         string="Factura ENZO"
         model="account.invoice"
         report_type="qweb-pdf"
-        print_report_name = "((object.invoice or '').replace('/','')+'_factura')"
+        print_report_name = "((object.name or '').replace('/','')+'_factura')"
         name="ryb_invoice_enzo.factura_ENZO_template"
     />
 
