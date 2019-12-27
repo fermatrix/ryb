@@ -6,6 +6,7 @@
         string="Factura ENZO"
         model="account.invoice"
         report_type="qweb-pdf"
+        report_name="account.report_invoice"
         name="ryb_invoice_enzo.factura_ENZO_template"
     />
 
