@@ -11,7 +11,7 @@
         file="ryb_invoice_enzo.factura_ENZO"
         attachment_use="True"
         attachment="(object.state in ('open','paid')) and
-        ((object.number or '').replace('/','')+'_enzo.pdf')"
+        ((object.number or '').replace('/','')+'.pdf')"
     />
 
 
