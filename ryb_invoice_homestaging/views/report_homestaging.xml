@@ -11,7 +11,7 @@
         file="ryb_invoice_homestaging.factura_homestaging"
         attachment_use="True"
         attachment="(object.state in ('open','paid')) and
-        ('+(object.number or '').replace('/','')+'_homestaging.pdf')"
+        ((object.number or '').replace('/','')+'_homestaging.pdf')"
     />
 
 
