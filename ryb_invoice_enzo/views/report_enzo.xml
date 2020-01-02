@@ -11,7 +11,7 @@
         file="ryb_invoice_enzo.factura_ENZO"
         attachment_use="True"
         attachment="(object.state in ('open','paid')) and
-        ('INV'+(object.number or '').replace('/','')+'.pdf')"
+        ('INVoiceci-TA '+(object.number or '').replace('/','')+'.pdf')"
     />
 
 
