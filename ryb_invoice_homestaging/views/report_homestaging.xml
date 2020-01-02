@@ -6,7 +6,7 @@
         string="Factura Home Staging"
         model="account.invoice"
         report_type="qweb-html"
-        print_report_name = "((object.number or '').replace('/','')+'_hs')"
+        print_report_name = "((object.number or 'borrador').replace('/','')+'_hs')"
         name="ryb_invoice_homestaging.factura_homestaging_template"
         file="ryb_invoice_homestaging.factura_homestaging"
         attachment_use="True"
