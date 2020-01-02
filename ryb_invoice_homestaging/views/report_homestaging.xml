@@ -7,6 +7,10 @@
         model="account.invoice"
         report_type="qweb-html"
         name="ryb_invoice_homestaging.factura_homestaging_template"
+        file="ryb_invoice_homestaging.factura_homestaging"
+        attachment_use="True"
+        attachment="(object.state in ('open','paid')) and
+        ('Factura Home Staging - '+(object.number or '').replace('/','')+'.pdf')"
     />
 
 
