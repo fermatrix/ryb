@@ -75,7 +75,11 @@ class IrAttachment(models.Model):
                     '* AWS_BUCKETNAME\n'
                     'Optionally, the S3 host can be changed with:\n'
                     '* AWS_HOST\n'
-                    ) % (bucket_name, bucket_name)
+                    '- AWS_HOST: %s \n'
+                    '- AWS_ACCESS_KEY_ID: %s \n'
+                    '- AWS_SECRET_ACCESS_KEY: %s \n'
+                    '- AWS_BUCKETNAME: %s \n'
+                    ) % (bucket_name, bucket_name, host, access_key, secret_key, bucket_name )
 
             raise exceptions.UserError(msg)
         # try:
