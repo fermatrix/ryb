@@ -246,7 +246,7 @@
                     </div>
                 </div>
 
-                <div style="height: 80px">
+                <div style="height: 60px">
                 </div>
 
                 <!-- Forma de pago     -->
@@ -254,7 +254,7 @@
                     <div class="col-12">
                         <p class="mb-0" style="font-weight:bold;">Términos y condiciones</p>
                         <p class="mb-0" style="font-weight:light; font-size:12px">Pago al contado o por transferencia a:</p>
-                        <p class="mb-0" style="font-weight:light; font-size:12px">Titular: RENT &amp; BUY S.A.</p>
+                        <p class="mb-0" style="font-weight:bold; font-size:12px">Titular: RENT &amp; BUY S.A.</p>
                         <p class="mb-0" style="font-weight:light; font-size:12px">Banco Santander</p>
                         <p class="mb-0" style="font-weight:light; font-size:12px">C/ José del Hierro, 51</p>
                         <p class="mb-0" style="font-weight:light; font-size:12px">28027 Madrid</p>
