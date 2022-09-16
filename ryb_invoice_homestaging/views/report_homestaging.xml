@@ -4,14 +4,14 @@
     <report
         id="report_ryb_invoice_homestaging"
         string="Factura Home Staging"
-        model="account.invoice"
+        model="account.move"
         report_type="qweb-pdf"
-        print_report_name = "((object.number or 'borrador').replace('/',''))"
+        print_report_name = "((object.name or 'borrador').replace('/',''))"
         name="ryb_invoice_homestaging.factura_homestaging_template"
         file="ryb_invoice_homestaging.factura_homestaging"
         attachment_use="True"
         attachment="(object.state in ('open','paid')) and
-        ((object.number or '').replace('/','')+'.pdf')"
+        ((object.name or '').replace('/','')+'.pdf')"
     />
 
 
@@ -126,19 +126,19 @@
                 <!-- Datos de la factura -->
                 <div class="row">
                     <div class="col-2">
-                        <p><span t-if="o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid', 'draft')">Factura</span></p>
+                        <p><span t-if="o.move_type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid', 'draft')">Factura</span></p>
                     </div>
                     <div class="col-10">
-                        <p style="font-weight:bold;"><span t-field="o.number"/></p>
+                        <p style="font-weight:bold;"><span t-field="o.name"/></p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-2">
-                        <p><span t-if="o.date_invoice" name="invoice_date">Fecha</span></p>
+                        <p><span t-if="o.invoice_date" name="invoice_date">Fecha</span></p>
                     </div>
                     <div class="col-10">
-                        <p style="font-weight: bold;"><span class="m-0" t-field="o.date_invoice"/></p>
+                        <p style="font-weight: bold;"><span class="m-0" t-field="o.invoice_date"/></p>
                     </div>
                 </div>
 
@@ -215,23 +215,10 @@
                                 <t t-foreach="o.amount_by_group" t-as="amount_by_group">
 
                                     <tr style="">
-                                        <t t-if="len(o.tax_line_ids) == 1 and o.amount_untaxed == amount_by_group[2]">
                                             <td><span t-esc="amount_by_group[0]"/></td>
                                             <td class="text-right o_price_total">
                                                 <span t-esc="amount_by_group[3]"/>
                                             </td>
-                                        </t>
-                                        <t t-else="">
-                                            <td>
-                                                <span t-esc="amount_by_group[0]"/>
-<!--                                                 <span>&amp;nbsp;<span>de</span>
-                                                    <t t-esc="amount_by_group[4]"/>
-                                                </span>
- -->                                            </td>
-                                            <td class="text-right o_price_total">
-                                                <span t-esc="amount_by_group[3]"/>
-                                            </td>
-                                        </t>
                                     </tr>
 
                                 </t>
