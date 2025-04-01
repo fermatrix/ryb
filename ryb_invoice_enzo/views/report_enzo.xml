@@ -54,19 +54,15 @@
 
             <div class="header">
                 <div class="row">
-
-                    <!-- Logo empresa -->
                     <div class="col-6" style="margin-top:35px;">
-                        <img src="/ryb_invoice_enzo/static/src/img/logo_enzo.svg"/>
+                        <img src="/ryb_invoice_enzo/static/logo-enzo.gif"/>
                     </div>
-
-                    <!-- Direccion empresa -->
                     <div class="col-6 text-right" style="margin-top:35px;">
                         <p class="font-weight-bold mb-0 mt-3">RENT &amp; BUY, S.A. (ENZO)</p>
                         <p class="font-weight-normal mb-0">CIF: A80946312</p>
                         <p class="font-weight-normal mb-0">C/ Tampico 34</p>
                         <p class="font-weight-normal mb-0">28027 Madrid - España</p>
-                        <p class="font-weight-normal mb-0">Tel: +34 91 393 20 10</p>
+                        <p class="font-weight-normal mb-0">Tel: +34 91 742 02 33</p>
                     </div>
 
                 </div>
@@ -76,18 +72,14 @@
                 <t t-call="web.address_layout"/>
                 <t t-raw="0"/>
             </div>
-
-
-            <!-- Footer de la factura de ENZO -->
             <div class="footer o_standard_footer">
                 <div class="text-center" style="border-top: 1px solid Black; padding-top:15px">
                     <ul class="list-unstyled">
-                        <li><b><span style="font-weight: bold;">DESARROLLO DE SOFTWARE A MEDIDA</span></b></li>
+                        <li><b><span style="font-weight: bold;">IMPLANTACIÓN DE SOFTWARE EN LA NUBE</span></b></li>
                         <li><span>www.enzo.es - info@enzo.es</span></li>
                     </ul>
                 </div>
             </div>
-
         </t>
 
     </template>
@@ -96,10 +88,7 @@
 
     <!-- Contenido de la factura -->
     <template id="esquema_factura_document">
-
         <t t-call="ryb_invoice_enzo.aux_para_datos">
-
-
             <div class="page">
 
                 <t t-set="o" t-value="o.with_context(lang=lang)"/>
