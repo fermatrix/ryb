@@ -24,19 +24,6 @@
     </template>
 
 
-
-
-    <template id="aux_para_datos">
-        <t t-name="ryb_invoice_enzo.aux_para_datos">
-            <t t-if="not o" t-set="o" t-value="doc"/>
-            <t t-set="company" t-value="res_company"/>
-            <t t-call="ryb_invoice_enzo.encabezadoypie"><t t-raw="0"/></t>
-        </t>
-    </template>
-
-
-
-
     <template id="encabezadoypie">
 
         <t t-name="ryb_invoice_enzo.encabezadoypie">
@@ -86,7 +73,9 @@
     <!-- Contenido de la factura -->
     <template id="esquema_factura_document">
 
-        <t t-call="ryb_invoice_enzo.aux_para_datos">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-set="company" t-value="res_company"/>
+            <t t-call="ryb_invoice_enzo.encabezadoypie"><t t-raw="0"/></t>
 
 
             <div class="page">
