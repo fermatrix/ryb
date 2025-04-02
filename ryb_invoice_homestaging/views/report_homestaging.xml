@@ -1,6 +1,5 @@
 <odoo>
   <data>
- 
     <report
         id="report_ryb_invoice_homestaging"
         string="Factura Home Staging"
@@ -9,7 +8,7 @@
         print_report_name = "((object.name or 'borrador').replace('/',''))"
         name="ryb_invoice_homestaging.factura_homestaging_template"
         file="ryb_invoice_homestaging.factura_homestaging"
-        attachment_use="True"
+        attachment_use="False"
         attachment="(object.state in ('open','paid','posted')) and ((object.name or '').replace('/','')+'.pdf')"
     />
 
