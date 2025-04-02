@@ -88,7 +88,7 @@
             </div>
 
 
-            <!-- Footer de la factura de ENZO -->
+            <!-- Footer de la factura  -->
             <div class="footer o_standard_footer">
                 <div class="text-center" style="border-top: 1px solid Black; padding-top:15px">
                     <ul class="list-unstyled">
@@ -126,7 +126,7 @@
                 <!-- Datos de la factura -->
                 <div class="row">
                     <div class="col-2">
-                        <p><span t-if="o.move_type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid', 'draft')">Factura</span></p>
+                        <p><span t-if="o.move_type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid', 'draft', 'posted')">Factura</span></p>
                     </div>
                     <div class="col-10">
                         <p style="font-weight:bold;"><span t-field="o.name"/></p>
