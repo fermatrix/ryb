@@ -13,43 +13,6 @@
         attachment="(object.state in ('open','paid','posted')) and ((object.name or '').replace('/','')+'.pdf')"
     />
 
-
-    <template id="encabezadoypie">
-        <t t-name="ryb_invoice_enzo.encabezadoypie">
-            <div class="header">
-                <div class="row">
-                    <!-- Logo empresa -->
-                    <div class="col-6" style="margin-top:35px;">
-                        <img src="/ryb_invoice_enzo/static/src/img/logo_enzo.svg"/>
-                    </div>
-                    <!-- Direccion empresa -->
-                    <div class="col-6 text-right" style="margin-top:35px;">
-                        <p class="font-weight-bold mb-0 mt-3">RENT &amp; BUY, S.A. (ENZO)</p>
-                        <p class="font-weight-normal mb-0">CIF: A80946312</p>
-                        <p class="font-weight-normal mb-0">C/ Tampico 34</p>
-                        <p class="font-weight-normal mb-0">28027 Madrid - España</p>
-                        <p class="font-weight-normal mb-0">Tel: +34 91 742 02 33</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="article o_report_layout_standard" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-                <t t-call="web.address_layout"/>
-                <t t-raw="0"/>
-            </div>
-
-            <!-- Footer de la factura de ENZO -->
-            <div class="footer o_standard_footer">
-                <div class="text-center" style="border-top: 1px solid Black; padding-top:15px">
-                    <ul class="list-unstyled">
-                        <li><b><span style="font-weight: bold;">SOFTWARE PARA EMPRESAS EN LA NUBE</span></b></li>
-                        <li><span>www.enzo.es - info@enzo.es</span></li>
-                    </ul>
-                </div>
-            </div>
-        </t>
-    </template>
-
     <template id="factura_ENZO_template">
         <t t-call="web.html_container">
         <t t-if="not o" t-set="o" t-value="doc"/>
@@ -208,6 +171,43 @@
         </div>
         </t>
     </template>
+
+    <template id="encabezadoypie">
+        <t t-name="ryb_invoice_enzo.encabezadoypie">
+            <div class="header">
+                <div class="row">
+                    <!-- Logo empresa -->
+                    <div class="col-6" style="margin-top:35px;">
+                        <img src="/ryb_invoice_enzo/static/src/img/logo_enzo.svg"/>
+                    </div>
+                    <!-- Direccion empresa -->
+                    <div class="col-6 text-right" style="margin-top:35px;">
+                        <p class="font-weight-bold mb-0 mt-3">RENT &amp; BUY, S.A. (ENZO)</p>
+                        <p class="font-weight-normal mb-0">CIF: A80946312</p>
+                        <p class="font-weight-normal mb-0">C/ Tampico 34</p>
+                        <p class="font-weight-normal mb-0">28027 Madrid - España</p>
+                        <p class="font-weight-normal mb-0">Tel: +34 91 742 02 33</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article o_report_layout_standard" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-call="web.address_layout"/>
+                <t t-raw="0"/>
+            </div>
+
+            <!-- Footer de la factura de ENZO -->
+            <div class="footer o_standard_footer">
+                <div class="text-center" style="border-top: 1px solid Black; padding-top:15px">
+                    <ul class="list-unstyled">
+                        <li><b><span style="font-weight: bold;">SOFTWARE PARA EMPRESAS EN LA NUBE</span></b></li>
+                        <li><span>www.enzo.es - info@enzo.es</span></li>
+                    </ul>
+                </div>
+            </div>
+        </t>
+    </template>
+
 
   </data>
 </odoo>
