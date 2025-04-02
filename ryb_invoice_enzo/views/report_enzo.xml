@@ -10,8 +10,7 @@
         name="ryb_invoice_enzo.factura_ENZO_template"
         file="ryb_invoice_enzo.factura_ENZO"
         attachment_use="True"
-        attachment="(object.state in ('open','paid')) and
-        ((object.name or '').replace('/','')+'.pdf')"
+        attachment="(object.state in ('open','paid','posted')) and ((object.name or '').replace('/','')+'.pdf')"
     />
 
 
