@@ -23,18 +23,24 @@
         </t>
     </template>
 
-
-
-
     <template id="aux_para_datos">
         <t t-name="ryb_invoice_enzo.aux_para_datos">
             <t t-if="not o" t-set="o" t-value="doc"/>
-            <t t-set="company" t-value="res_company"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
             <t t-call="ryb_invoice_enzo.encabezadoypie"><t t-raw="0"/></t>
         </t>
     </template>
-
-
 
 
     <template id="encabezadoypie">
