@@ -1,6 +1,5 @@
 <odoo>
   <data>
- 
     <report
         id="report_ryb_invoice_enzo"
         string="Factura ENZO"
@@ -90,12 +89,8 @@
 
     <!-- Contenido de la factura -->
     <template id="esquema_factura_document">
-
         <t t-call="ryb_invoice_enzo.aux_para_datos">
-
-
             <div class="page">
-
                 <t t-set="o" t-value="o.with_context(lang=lang)"/>
 
                 <!-- Datos del cliente -->
